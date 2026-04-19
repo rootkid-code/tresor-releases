@@ -1,0 +1,11 @@
+{
+  "version": "0.1.1-beta.3",
+  "notes": "# Tresor v0.1.1-beta.3\n\n## Release\n- Channel: beta\n- Previous version: 0.1.1-beta.2\n- Commit range: v0.1.1-beta.2..HEAD\n- Rollout guidance: Preview release for evaluation only; expect follow-up changes before stable rollout.\n\n## Summary\nThird live beta release after skipping MSI-only Windows bundling for beta semver versions.\n\n## Highlights\nRelease workflow now avoids the Tauri MSI prerelease constraint for beta tags.; Retry of the hardened private-source/public-distribution beta lane after the MSI bundling fix.\n\n## Breaking changes\nNone.\n\n## Migration hints\nNo migration steps required.\n\n## Validation\n- Frontend CI will re-run `npm run lint`, `npm run test`, and `npm run build` on the release tag.\n- Rust CI will re-run `cargo check --workspace` and `npm run test:rust` on the release tag.\n- Draft release packaging remains automatic; public publishing is a separate manual review gate.\n\n## Commits\n- fix(release): skip msi bundling for beta versions (aceae5a)",
+  "pub_date": "04/19/2026 10:12:29",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUdEFqYW9zcG01YlJ6TnZaa0pVQkk3R05pQzdVbUl3dVJTR3VBVVlEcHRDWkhrNUNMQ1psMk1pdk1WVFlXT013dkJzeUV2MW9kUldveWtnYWI4Y3JmbVY3UE4zdWhOc3dBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc2Mjg3MjQ1CWZpbGU6VHJlc29yXzAuMS4xLWJldGEuM194NjQtc2V0dXAuZXhlCm1TL1ZCT3ZkMDAzVy9Tck5LUHhLM0Q0L2UvZWFaL1lqSmNya3lPdWpuaEc1d1o1V1lZQjBTbjR2SmhXa29VeFIweGp1UXZaeDZQc0pGN0VoNnFmTkF3PT0K",
+      "url": "https://github.com/rootkid-code/tresor-releases/releases/download/v0.1.1-beta.3/Tresor_0.1.1-beta.3_x64-setup.exe"
+    }
+  }
+}
