@@ -145,3 +145,10 @@ Das öffentliche Test-Repository besitzt bereits seine **eigenen deutsch- und en
 <img src="assets/tresor-test-workflow.de.svg" width="100%" alt="Tresor – vorhandene deutschsprachige Ablaufgrafik für das ausschließlich experimentelle Beta-Testen" />
 
 **Wichtig:** Jede Grafik illustriert nur die Testumgebung. Die Hinweise **„nur Testdaten“**, **„keine echten Dokumente“** und **„keine Produktionsfreigabe“** bleiben verbindlich; keine technische Sicherheitsgarantie wird suggeriert.
+
+---
+
+## Branding & Präsentationsstandard
+
+Die [Brand-/GitHub-Präsentationsrichtlinie](docs/GITHUB_PRESENTATION.md) verknüpft Originalmedien, Kommunikationsfluss, Qualitätsgrenzen und konkrete Review-Gates.
+
