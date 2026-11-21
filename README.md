@@ -106,6 +106,8 @@ Das Projekt macht keine Zusage zum Schutz gegen kompromittierte Betriebssysteme,
 
 **Unabhängig davon bleibt jede aktuelle Beta-Version für echte Datenspeicherung und Datensicherung ungeeignet.**
 
+[**Dokumentations- und Release-Leitfaden**](docs/PROJECT_OVERVIEW.md)
+
 ## Projekt-Repositories
 
 | Repository | Zweck |
