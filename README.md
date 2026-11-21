@@ -128,3 +128,20 @@ Das Projekt macht keine Zusage zum Schutz gegen kompromittierte Betriebssysteme,
 **Deutsch** · [**English**](docs/README.en.md)
 
 </div>
+
+---
+
+## Vorhandene Beta-Branding- und Erklärgrafiken
+
+Das öffentliche Test-Repository besitzt bereits seine **eigenen deutsch- und englischsprachigen Originalgrafiken**. Sie werden bewusst nicht durch Produktions- oder Trust-Badges ersetzt.
+
+| Originaldatei | Einordnung |
+|---|---|
+| [Beta-Hero (DE)](assets/tresor-beta-hero.de.svg) | Bereits im deutschen README verwendete Titelgrafik |
+| [Beta-Hero (EN)](assets/tresor-beta-hero.svg) | Englische Projektgrafik |
+| [Test-Workflow (DE)](assets/tresor-test-workflow.de.svg) | Erklärung des vorgesehenen Testablaufs |
+| [Test-Workflow (EN)](assets/tresor-test-workflow.svg) | Englische Test-Workflow-Grafik |
+
+<img src="assets/tresor-test-workflow.de.svg" width="100%" alt="Tresor – vorhandene deutschsprachige Ablaufgrafik für das ausschließlich experimentelle Beta-Testen" />
+
+**Wichtig:** Jede Grafik illustriert nur die Testumgebung. Die Hinweise **„nur Testdaten“**, **„keine echten Dokumente“** und **„keine Produktionsfreigabe“** bleiben verbindlich; keine technische Sicherheitsgarantie wird suggeriert.
