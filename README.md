@@ -1,76 +1,139 @@
-# Tresor — Beta Releases
+<div align="center">
 
-> **Experimental beta software · Not production-ready**
->
-> Tresor is a Windows-first, offline file-vault project under active development.
-> Releases in this repository are **for technical evaluation and testing only**.
-> They are **not certified, independently security-audited, or approved for production use**.
-> **Do not rely on these builds to protect sensitive, confidential, valuable, or irreplaceable data.**
-> Use only disposable sample files and keep independent backups.
+<img src="./assets/tresor-beta-hero.svg" alt="Tresor beta: Made to be tested, not to store real data. Original conceptual artwork, not a screenshot." width="100%" />
 
-## Release status
+<br />
 
-| Item | Current status |
-| --- | --- |
-| Software maturity | **Experimental beta / test build** |
-| Distribution | Windows desktop test packages and update-feed artifacts |
-| Latest **publicly published** beta verified on 2026-11-21 | `v0.1.1-beta.12` |
-| `v0.1.1-beta.13` | Prepared in the private source repository; **not confirmed as a publicly published release** |
-| Stable / production release | **Not available** |
-| Support, compatibility and data-recovery guarantees | **None** |
+# TRESOR / BETA LAB
 
-**Release availability matters:** A version mentioned in a changelog or source tag does not mean it is publicly available or approved for use. GitHub draft releases and unpublished artifacts are not general releases.
+**An experimental Windows desktop project for technical testing — not a product for real-world data storage.**
 
-[View published test releases](https://github.com/rootkid-code/tresor-releases/releases)
+[![Release channel](https://img.shields.io/badge/CHANNEL-EXPERIMENTAL_BETA-143645?style=flat-square&labelColor=101b2a&color=286a76)](https://github.com/rootkid-code/tresor-releases/releases)
+![Production ready](https://img.shields.io/badge/PRODUCTION-NOT_APPROVED-d87944?style=flat-square&labelColor=101b2a)
+![Data policy](https://img.shields.io/badge/DATA-DUMMY_FILES_ONLY-7e6d9b?style=flat-square&labelColor=101b2a)
+![Platform](https://img.shields.io/badge/PLATFORM-WINDOWS-4b7795?style=flat-square&labelColor=101b2a)
 
-## What Tresor is testing
+[**View beta releases**](https://github.com/rootkid-code/tresor-releases/releases) · [**Release information**](#release-status) · [**Testing guidelines**](#the-only-intended-use-testing) · [**Remaining work**](#what-is-not-finished)
 
-Tresor explores a local-first encrypted file vault with a native Windows desktop host (Tauri/Rust) and a React/TypeScript interface. The source project's current beta scope includes:
-
-- Vault creation and passphrase-based unlock, with key-management and encrypted storage primitives.
-- Encrypted file import, metadata search, previews, and explicitly initiated export.
-- Separate encrypted sharing packages, backup and recovery workflows.
-- Desktop session protection and experimental packaging/updater infrastructure.
-
-These are **implemented or documented beta capabilities**, not guarantees of correct operation under every condition or proof of security.
-
-## Known limitations and work remaining
-
-The project needs substantial additional engineering and verification before a stable release:
-
-1. **Independent security assessment:** review the threat model, cryptography integration, file-system trust boundaries, dependencies and desktop attack surface; remediate findings.
-2. **Rollback resistance:** the internal committed-state verification exists, but a reliable **external monotonic anti-rollback anchor is still missing**. Rolling back an entire vault to an older consistent state is not fully covered.
-3. **Recovery assurance:** broaden destructive-failure, interrupted-write, corrupt-file, migration, backup/restore and cross-version tests; verify restore procedures using disposable vaults.
-4. **Windows compatibility and usability:** expand real-device testing across supported Windows configurations, WebView2 environments, high-DPI displays and accessibility scenarios.
-5. **Release integrity:** verify installer signing, updater signing and provenance on each build; test installation, upgrade, rollback and uninstall with repeatable evidence.
-6. **Performance and optional features:** continue evaluating resource usage, preview behavior and opt-in local super-resolution without treating experimental modules as production-stable.
-7. **Operational readiness:** finalize documentation, vulnerability reporting, support expectations, release criteria and reproducible acceptance evidence.
-
-**Security model boundary:** Tresor does not promise protection against a compromised operating system, privileged malware, hardware keyloggers, or all RAM, paging and screen-capture exposure. A beta test is not a substitute for established storage and backup solutions.
-
-## If you choose to test a beta
-
-- Use **non-sensitive, disposable sample files only**. Do not import credentials, confidential documents, unique photos or your only copy of any file.
-- Use a dedicated test vault and keep independent copies outside Tresor.
-- Download artifacts only from the [GitHub Releases page](https://github.com/rootkid-code/tresor-releases/releases).
-- Where provided, compare downloaded files with the accompanying `SHA256SUMS.txt`. Checksums help detect accidental changes, but **do not establish trust in the publisher by themselves**.
-- Do not assume that draft assets, updater metadata or installer signatures imply a completed security review.
-- Expect breaking changes, defects, possible data loss and incompatible beta formats.
-
-## Release process
-
-The source project uses a controlled, tag-based Windows packaging workflow. Build artifacts and checksums are generated as release candidates; publication is a separate manual review step. The public repository hosts distribution assets and an updater feed where available.
-
-**A published beta is still a beta.** Publication does not signify production readiness or a security certification.
-
-## Project links
-
-- [Public beta downloads](https://github.com/rootkid-code/tresor-releases/releases)
-- [Source repository](https://github.com/rootkid-code/tresor) *(may require access; currently private)*
-- [Release notes](https://github.com/rootkid-code/tresor/releases) *(source-repository access may be required)*
+</div>
 
 ---
 
-### Development status / disclaimer
+> [!CAUTION]
+> ### TEST VERSION ONLY — NOT FOR REAL DATA
+>
+> **Tresor is an unfinished, experimental beta project. It is not production-ready, independently security-certified, or approved for personal or professional data storage.**
+>
+> **Do not use it to store, encrypt for safekeeping, back up, transfer, or protect real files.** Never import documents, private photos, passwords, credentials, business data, financial records, or any file you cannot afford to lose.
+>
+> **Use exclusively synthetic, disposable test files in an isolated test environment.** Unexpected defects, data loss, corrupted test vaults, security weaknesses and incompatible updates are possible. No security, availability, recovery or compatibility guarantee is provided.
+>
+> **The existence of encryption features, installers, downloads or update feeds does not change this restriction.**
 
-**Tresor is a development and test project, not a finished or production-ready product.** Important security, quality-assurance, resilience, compatibility, release and documentation work remains. No warranty of data integrity, data recovery or confidentiality is made for these beta builds. Please do not use them for real-world secure storage.
+## Project at a glance
+
+| | |
+| :-- | :-- |
+| **Project** | Tresor — Windows-first offline vault *prototype* |
+| **Current purpose** | Explore implementation, evaluate technical behavior, discover defects |
+| **Release channel** | **Experimental beta / test builds only** |
+| **Last publicly published beta confirmed on 21 November 2026** | [`v0.1.1-beta.12`](https://github.com/rootkid-code/tresor-releases/releases/tag/v0.1.1-beta.12) |
+| **`v0.1.1-beta.13`** | Prepared in the private development repository; **not confirmed as publicly released** |
+| **Stable release** | **None** |
+| **Real data storage** | **Not permitted / not recommended for this test project** |
+| **Independent security assessment** | Not established |
+| **Guarantees & production support** | None |
+
+## The only intended use: testing
+
+<div align="center">
+<img src="./assets/tresor-test-workflow.svg" alt="Original diagram: 1. Prepare synthetic files, 2. evaluate in an isolated environment, 3. discard test data. No real documents or production use." width="100%" />
+</div>
+
+**This repository exists to distribute experimental builds for controlled evaluation.** Appropriate activities include testing a feature with generated sample files, reproducing bugs, evaluating UI behavior, testing upgrades and failure cases, and collecting technical feedback.
+
+**Not appropriate:** storing real data, relying on Tresor as a backup, securing sensitive information, using it in daily work, or claiming a beta build is a finished security product.
+
+The graphics above are **original concept illustrations**, not application screenshots and not evidence that a feature has passed security validation.
+
+## Prototype capabilities under evaluation
+
+The development project explores a local-first Windows desktop application using **Tauri, Rust, React and TypeScript**, including:
+
+| Area | What is being explored | Status |
+| :-- | :-- | :-- |
+| Vault fundamentals | Test vault creation, unlocking and encrypted file handling | Beta implementation; not production-certified |
+| File workflows | Experimental import, preview, search and explicit export | Test-only |
+| Transfer & recovery | Experimental encrypted share packages, backups and restore flows | Test-only; additional recovery validation required |
+| Desktop controls | Session timeout, lock behavior and native host boundaries | Under continued review |
+| Distribution | Windows installer packaging, release checks and update-feed artifacts | Experimental release infrastructure |
+
+These are **technical development areas, not promises of reliability, security or fitness for actual storage**.
+
+## Release status
+
+<div align="center">
+
+**EXPERIMENTAL BETA** → **MORE TESTING REQUIRED** → **STABLE RELEASE NOT AVAILABLE**
+
+</div>
+
+The latest version **confirmed as publicly published** in this distribution repository as of **21 November 2026** is **`v0.1.1-beta.12`**. The source project's `v0.1.1-beta.13` entry does not itself mean a public, tested release is available.
+
+[Browse the published beta artifacts](https://github.com/rootkid-code/tresor-releases/releases)
+
+A release tag, passing automated check, installer signature, checksum, GitHub draft or downloadable artifact **must never be interpreted as production approval**. Where a `SHA256SUMS.txt` file is supplied, a matching checksum checks file integrity against that manifest; it is **not proof of application security**.
+
+### Release lifecycle
+
+```text
+Development → automated checks → beta packaging → review → optional beta publication
+                                                     ≠ production approval
+```
+
+Release publication is a separate action from creating a draft or building test packages. Additional independent acceptance criteria would be required before any future stable release.
+
+## What is not finished
+
+The project requires substantial further work. The list below describes **open engineering and release-readiness requirements**, not completed certifications.
+
+| Priority area | Before any production discussion |
+| :-- | :-- |
+| **Independent security review** | Review application trust boundaries, cryptographic integration, dependencies, filesystem access and session handling; remediate findings and retest |
+| **Rollback resistance** | Implement and validate an external monotonic anchor; local vault integrity checks alone cannot reliably detect a complete rollback to a previously valid vault |
+| **Data loss & recovery testing** | Stress-test interrupted writes, corrupted data, backups, restores, migrations, failed updates and recovery across versions |
+| **Windows compatibility** | Verify supported Windows versions, WebView2 dependencies, permissions, accessibility, scaling, hardware and edge cases |
+| **Release integrity** | Validate signing, update trust, reproducibility, installation, upgrades, failure handling and uninstall behavior |
+| **Performance & UX** | Test resource consumption, previews, optional local image-processing paths and clear failure feedback |
+| **Documentation & support** | Define supported environments, known limitations, security reporting, acceptance gates and realistic support expectations |
+
+Even after these engineering tasks, a future stable release would require **explicit validation and a separate release decision**. No such approval is claimed here.
+
+## Security boundaries
+
+Tresor's design does **not** promise protection against a compromised operating system, privileged malware, hardware keyloggers, or every possible exposure through memory, operating-system paging or screen capture.
+
+The application is **not** presented as a replacement for an established storage, backup or security solution.
+
+## About these repositories
+
+| Repository | Purpose |
+| :-- | :-- |
+| **[tresor-releases](https://github.com/rootkid-code/tresor-releases)** | Public distribution area for experimental beta artifacts and update-feed files |
+| **[tresor](https://github.com/rootkid-code/tresor)** | Development source, technical documentation and implementation history; currently private and may require access |
+
+**Want to inspect a beta?** Use a disposable Windows test environment and dummy files only. Do not promote the result into real-world use, even if a short trial seems successful.
+
+---
+
+<div align="center">
+
+### DEVELOPMENT PROJECT · BETA TESTING ONLY
+
+**Not a finished product. Not secure storage for real files. Not production-ready.**
+
+*No guarantee of confidentiality, data integrity, recovery or continued compatibility.*
+
+<sub>Original vector illustrations created specifically for this README. Illustrative only; no actual application screens are depicted.</sub>
+
+</div>
